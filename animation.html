@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation test</title>
+    <link rel="stylesheet" href="animation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="squares" id="running">
+        </div>
+        <div class="list-item">
+            <ul class="list" id="addlist">
+                <li class="list-image">
+                    <div class="items">
+                        <img src="1.png" alt="">
+                        <img src="2.png" alt="">
+                        <img src="3.png" alt="">
+                    </div>
+                    <div class="tables">
+                        <table class="table">
+                            <tr data-href="#">  <!--when click write jquery add to click-->
+                                <td><img src="1.png" alt=""></td>
+                                <td>tui xach lv</td>
+                            </tr>
+                            <tr>
+                                <td><img src="2.png" alt=""></td>
+                                <td>san pham 2</td>
+                            </tr>
+                            <tr>
+                                <td><img src="3.png" alt=""></td>
+                                <td>san pham 3</td>
+                            </tr>
+                        </table>
+                    </div>
+                </li>
+                <li class="list-image">
+                    <div class="items">
+                        <img src="1.png" alt="">
+                        <img src="2.png" alt="">
+                        <img src="3.png" alt="">
+                    </div>
+                    <div class="tables">
+                        <table class="table">
+                            <tr data-href="#">  <!--when click write jquery add to click-->
+                                <td><img src="1.png" alt=""></td>
+                                <td>tui xach lv</td>
+                            </tr>
+                            <tr>
+                                <td><img src="2.png" alt=""></td>
+                                <td>san pham 2</td>
+                            </tr>
+                            <tr>
+                                <td><img src="3.png" alt=""></td>
+                                <td>san pham 3</td>
+                            </tr>
+                        </table>
+                    </div>
+                </li>
+                <li class="list-image">
+                    <div class="items">
+                        <img src="1.png" alt="">
+                        <img src="2.png" alt="">
+                        <img src="3.png" alt="">
+                    </div>
+                    <div class="tables">
+                        <table class="table">
+                            <tr data-href="#">  <!--when click write jquery add to click-->
+                                <td><img src="1.png" alt=""></td>
+                                <td>tui xach lv</td>
+                            </tr>
+                            <tr>
+                                <td><img src="2.png" alt=""></td>
+                                <td>san pham 2</td>
+                            </tr>
+                            <tr>
+                                <td><img src="3.png" alt=""></td>
+                                <td>san pham 3</td>
+                            </tr>
+                        </table>
+                    </div>
+                </li>
+               
+                <!-- <li class="list-image ">
+                    <div class="items">
+                        <img src="1.png" alt="">
+                        <img src="1.png" alt="">
+                        <img src="1.png" alt="">
+                    </div>
+                       abc1
+                </li>
+                <li class="list-image">
+                    <div class="items">
+                        <img src="1.png" alt="">
+                        <img src="1.png" alt="">
+                        <img src="1.png" alt="">
+                    </div>
+                       abc2
+                </li> -->
+                <!-- <li class="items ">
+                        <img src="1.png" alt="">
+                        <img src="5.jpg" alt="">
+                        <img src="1.jpg" alt="">
+                </li>
+                <li class="items ">
+                    <img src="1.png" alt="">
+                    <img src="5.jpg" alt="">
+                    <img src="1.jpg" alt="">
+                 </li>
+             -->
+             </ul>
+        </div>
+        <div class="btn">
+            <button id="next">
+                <i><i class="fa-solid fa-angle-right" aria-hidden="true"></i></i>
+            </button>
+        </div>
+    </div>
+    <!-- <div class="abc" style="position: absolute;">
+       
+        ava</div> -->
+
+    <script>
+        const btn = document.getElementById("next");
+        var current_rotation = 0;
+        // var check_time = false;
+        function rotation(){
+            check_time = true;
+            current_rotation += 90;
+            document.querySelector(".squares").style.transform = 'rotate(' + current_rotation%450 + 'deg)';
+      
+            const list = document.querySelectorAll(".list-image");
+            // console.log(list[2]);
+            document.getElementById('addlist').appendChild(list[0])
+        }
+        btn.addEventListener("click",rotation,false);
+
+       
+
+    </script>
+</body>
+</html>
